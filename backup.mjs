@@ -53,12 +53,14 @@ for (const [i, path] of Object.entries(images)) {
 
 html = html.concat(`
     <header>
-        Created at: ${new Date().toLocaleDateString()}
+        Backup of: ${keyID}
         <br>
-        Made with: ${config.repoUrl}
+        Created at: ${new Date().toLocaleDateString()}
     </header>
     <footer>
         Total chunks: ${images.length}
+        <br>
+        Made with: ${config.repoUrl}
     </footer>
 `)
 

@@ -2,4 +2,4 @@
 
 const pubkey = process.argv[process.argv.length - 1];
 
-const b64 = await $`zbarimg -q --raw ./generated/*.png | paperkey --pubring ${pubkey}`
+await $`zbarimg -q --raw ./generated/*.png | base64 -d | paperkey --pubring ${pubkey} | gpg --import`

@@ -1,4 +1,5 @@
 generated/*
+!generated/.gitkeep
 
 .DS_Store
 .idea
