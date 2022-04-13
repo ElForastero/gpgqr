@@ -16,7 +16,7 @@
 
 2. 🔑 Check if you have your secret keys on your machine:
 
-```shell
+```bash
 $ gpg -K
 /var/folders/jx/5ll9xg7166945zr_jrzh423m0000gn/T/gnupg_202204132230_XXX.6TZDeVqr/pubring.kbx
 --------------------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ on a USB drive?
 
 3. 🏞 Run backup script providing your key identifier:
 
-```shell
+```bash
 $ ./backup.mjs 5E4A60CDCE1374ADE9D4B42E311366FBF780DB86
 rm -f generated/*
 cp index.html generated/
@@ -55,7 +55,7 @@ To restore secret keys you need to have your public key, what usually is not a p
 1. 🏞 Place QR images inside `/generated` folder naming them with number suffix for proper sorting (like `qr-1.png`)
 2. 🔐 Run the script providing a path to your public key file (binary, not armored)
 
-```shell
+```bash
 $ ./restore.mjs ~/pubkey.gpg
 zbarimg -q --raw ./generated/*.png | base64 -d | paperkey --pubring /Users/eugenedzhumak/pubkey.gpg | gpg --import
 gpg: key 311366FBF780DB86: public key "Eugene Dzhumak <eugene@example.com>" imported
@@ -68,7 +68,7 @@ gpg:   secret keys imported: 1
 
 3. ✅ Done. Check your GPG keys, they were restored:
 
-```shell
+```bash
 $ gpg --list-secret-keys
 /var/folders/jx/5ll9xg7166945zr_jrzh423m0000gn/T/gnupg_202204132230_XXX.6TZDeVqr/pubring.kbx
 --------------------------------------------------------------------------------------------
