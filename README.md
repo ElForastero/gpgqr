@@ -1,5 +1,4 @@
 # 🔑 → GPGQR → 🏞 → 🖨
----
 
 > **gpgqr** helps to back up secret GPG keys as QR codes that may be printed
 
