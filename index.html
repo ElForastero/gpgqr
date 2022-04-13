@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>GPG Backup</title>
+        <style>
+            :root {
+                --header-height: 50px;
+            }
+
+            body {
+                font-family: monospace;
+                font-size: 14px;
+            }
+
+            figure {
+                text-align: center;
+                margin-bottom: 1cm;
+            }
+
+            header, footer {
+                height: var(--header-height);
+            }
+
+            .header-space, .footer-space {
+                height: calc(var(--header-height) + 1cm);
+            }
+
+            @media print {
+                header {
+                    top: 1cm;
+                    position: fixed;
+                }
+
+                footer {
+                    bottom: 1cm;
+                    position: fixed;
+                }
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <div class="header-space">&nbsp;</div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="content">{content}</div>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <div class="footer-space">&nbsp;</div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

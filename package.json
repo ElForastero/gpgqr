@@ -1,0 +1,9 @@
+{
+  "name": "gpg-qr-backup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "2.6.2"
+  }
+}
