@@ -1,4 +1,5 @@
 # 🔑 → GPGQR → 🏞 → 🖨
+---
 
 > **gpgqr** helps to back up secret GPG keys as QR codes that may be printed
 
@@ -10,7 +11,7 @@
 - `qrencode`
 - `zbarimg`
 
-### Creating backup
+## Creating backup
 
 1. ☝️ Install all the dependencies above.
 
@@ -48,7 +49,7 @@ qrencode -l L -o generated/qr-3.png
    see [example](example/example.pdf))
 5. ✨ You are awesome ✨
 
-### Restoring
+## Restoring
 
 To restore secret keys you need to have your public key, what usually is not a problem.
 
